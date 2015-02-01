@@ -14,11 +14,12 @@ The `default` recipe installs ddclient and fills out the `/etc/ddclient.conf` an
 
 USAGE
 =====
-You will need to set the attributes for your provider user, password and domain. Check the `attributes/default.rb` for other available attributes (note the 6 hour update interval). Here is an example role:
+
+You will need to set the attributes for your provider user, password and domain. Check the `attributes/default.rb` for other available attributes. Here is a example role:
 
 	{                                                                                                                                                
 	  "name": “your-chef role”,
-	  "description": "",
+	  "description": "example role with ddclient",
 	  "json_class": "Chef::Role",
 	  "default_attributes": {
 	
