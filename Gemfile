@@ -16,3 +16,7 @@ gem 'berkshelf'
 
 gem "test-kitchen"
 gem "kitchen-vagrant"
+gem "foodcritic"
+gem "chefspec"
+gem "rspec"
+gem "rubocop"
