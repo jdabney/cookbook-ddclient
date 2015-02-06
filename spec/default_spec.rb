@@ -17,19 +17,19 @@ describe 'ddclient::default' do
 
   it 'creates a ddclient configs with attributes' do
     expect(chef_run).to create_template('/etc/ddclient.conf').with(
-        source:'ddclient.conf.erb',
+        source: 'ddclient.conf.erb',
         user:   'root',
         group:  'root',
-        mode: '0600',
-    )
+        mode: '0600'
+  )
   end
 
   it 'creates a ddclient startup options with attributes' do
     expect(chef_run).to create_template('/etc/default/ddclient').with(
-                            source:'ddclient.erb',
+                            source: 'ddclient.erb',
                             user:   'root',
                             group:  'root',
-                            mode: '0600',
-                        )
+                            mode: '0600'
+  )
   end
 end

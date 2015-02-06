@@ -16,27 +16,27 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # 
-package "ddclient" do
+package 'ddclient' do
   action :install
 end
 
-service "ddclient" do
+service 'ddclient' do
   supports :restart => true, :status => true, :reload => true
-  action [ :enable, :start]
+  action [:enable, :start]
 end
 
-template "/etc/ddclient.conf" do
-  source "ddclient.conf.erb"
-  owner "root"
-  group "root"
-  mode "0600"
-  notifies :restart, "service[ddclient]"
+template '/etc/ddclient.conf' do
+  source 'ddclient.conf.erb'
+  owner 'root'
+  group 'root'
+  mode '0600'
+  notifies :restart, 'service[ddclient]'
 end
 
-template "/etc/default/ddclient" do
-  source "ddclient.erb"
-  owner "root"
-  group "root"
-  mode "0600"
-  notifies :restart, "service[ddclient]"
+template '/etc/default/ddclient' do
+  source 'ddclient.erb'
+  owner 'root'
+  group 'root'
+  mode '0600'
+  notifies :restart, 'service[ddclient]'
 end
